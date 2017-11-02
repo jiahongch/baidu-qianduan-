@@ -30,6 +30,7 @@ nav {
 	float: right;
 	margin-top: 40px
 }
+/*变为inline-block会使原来的小圆点也跟着不见，因为li的display属性是list-item，想保留小圆点可用float技术*/
 nav ul li {
 	display: inline-block;
 }
@@ -91,7 +92,7 @@ figure img {
 }
 /*处理最后一篇article*/
 article ol {
-	padding-left: 60px;
+	margin-left: 60px;
 }
 table {
 	width: 100%;
@@ -119,8 +120,34 @@ aside h1 {
 	font-size: 1.2em;
 	margin-bottom: 20px;
 }
-label[for="email"] {
-	padding-left: 100px;
+aside div {
+	margin: 15px;
+	margin-left: 100px;
+	overflow: hidden;
+}
+aside div * {
+	margin: 5px;
+}
+aside p {
+	font-size: .9em;
+	color: #777;
+}
+label[for="description"] {
+	float: left;
+}
+textarea {
+	width: 60%;
+	height: 10em;
+}
+button {
+	width: 80%;
+	font-size: 2em;
+	line-height: 1.5;
+	background-color: #02f;
+	margin: 0;
+	color: white;
+	border-radius: 25px;
+	border: none;
 }
 
 
