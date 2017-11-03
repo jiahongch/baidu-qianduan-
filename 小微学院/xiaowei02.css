@@ -120,17 +120,26 @@ aside h1 {
 	font-size: 1.2em;
 	margin-bottom: 20px;
 }
-aside div {
-	margin: 15px;
+div.align1 {
 	margin-left: 100px;
-	overflow: hidden;
 }
 aside div * {
-	margin: 5px;
+	margin: 3px;
+}
+.align1 label {
+	display: inline-block;
+	float: left;
+	text-align: right;
+	width: 10em;
+	clear: both;
 }
 aside p {
-	font-size: .9em;
+	font-size: .8em;
 	color: #777;
+}
+.align2 {
+	margin-left: 200px;
+	margin-top: 20px;
 }
 label[for="description"] {
 	float: left;
@@ -140,13 +149,12 @@ textarea {
 	height: 10em;
 }
 button {
-	width: 80%;
-	font-size: 2em;
-	line-height: 1.5;
-	background-color: #02f;
-	margin: 0;
+	width: 100%;
+	font-size: 1.2em;
+	line-height: 2;
+	background-color: #22f;
 	color: white;
-	border-radius: 25px;
+	border-radius: 10px;
 	border: none;
 }
 
