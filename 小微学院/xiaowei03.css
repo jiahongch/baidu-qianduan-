@@ -1,0 +1,53 @@
+.main_wrapper {
+	background-color: black;
+	margin: 0 auto;
+	margin-top: 20px;
+	min-width: 600px;
+	max-width: 1400px;
+	border: 1px solid #999;
+	padding: 20px;
+	overflow: hidden;	/*包围float的子元素*/
+}
+.two_wrapper {
+	float: left;
+	width: 100%;
+	margin-right: -120px;	/*让.person类的元素可以飘到左边*/
+}
+.team {
+	float: left;
+	width: 200px;
+	background-color: #eee;
+}
+.team img {
+	margin: 20px;
+}
+.team p {
+	float: right;
+	margin: 0;
+	margin-right: 15px;
+	margin-top: 20px;
+}
+.content {
+	background-color: #eee;
+	margin-left: 220px;
+	margin-right: 140px;
+	width: auto;
+	padding: 20px;
+}
+.person {
+	float: left;
+	background-color: #eee;
+	width: 120px;
+}
+.person img {
+	padding: 30px 20px; 
+}
+
+
+
+/**
+ * 所学知识：
+ * 1.对margin与padding的区分及哪个时候用哪个特性方便有效
+ * 2.灵活运用margin
+ * 3.float宽度合适时float：left才会飘向前一个float：left的左边，否则只会另起一行
+ **/
