@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>基础javascript练习(一)</title>
+	<style type="text/css">
+		body {
+			text-align: center;
+		}
+		.wrapper {
+			display: inline-block;
+			overflow: hidden;
+		}
+		#display > * {
+			float: left;
+			color: white;
+			background-color: red;
+			padding: 10px;
+			margin-right: 5px;
+		}
+		#right_in {
+			margin-right: 20px;
+		}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<div>
+		<input type="text" name="number" id="input_num">
+		<button id="left_in">左侧入</button>
+		<button id="right_in">右侧入</button>
+		<button id="left_out">左侧出</button>
+		<button id="right_out">右侧出</button>
+	</div>
+	<div id="display">
+	</div>
+</div>
+<script type="text/javascript">
+	window.onload = function() {
+		/*获取元素*/
+		var display = document.querySelector("#display");
+		var input = document.querySelector("#input_num");
+		var left_in = document.querySelector("#left_in");
+		var right_in = document.querySelector("#right_in");
+		var left_out = document.querySelector("#left_out");
+		var right_out = document.querySelector("#right_out");
+
+		function createDiv(a) {
+			let div = document.createElement("div");
+			div.innerHTML = a + "";
+			return div;
+		}
+
+		/*添加事件处理*/
+		left_in.addEventListener("click", function(evt) {
+			let num = Number(input.value);
+			if (!isNaN(num)) {
+				let ele = createDiv(num);
+				display.prepend(ele);
+			} 
+			else {
+				alert("请输入纯数字");
+			}
+		})
+		right_in.addEventListener("click", function(evt) {
+			let num = Number(input.value);
+			if (!isNaN(num)) {
+				let ele = createDiv(num);
+				display.append(ele);
+			} 
+			else {
+				alert("请输入纯数字");
+			}
+		})
+		left_out.addEventListener("click", function(evt) {
+			let ele = document.querySelector("#display > *:first-child");
+			ele.parentNode.removeChild(ele);
+			alert(ele.innerHTML);
+		})
+		right_out.addEventListener("click", function(evt) {
+			let ele = document.querySelector("#display > *:last-child");
+			ele.parentNode.removeChild(ele);
+			alert(ele.innerHTML);
+		})
+
+		/*处理点击时导致数据出队*/
+		document.body.addEventListener("click", function(event) {
+			var arr = document.querySelectorAll("#display > *");
+			arr.forEach(function(num) {
+				num.addEventListener("click", function(evt) {
+					this.parentNode.removeChild(this);
+					alert(this.innerHTML);
+				})
+			})	
+		})
+	}
+</script>
+</body>
+</html>
