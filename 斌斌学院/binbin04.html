@@ -84,6 +84,13 @@
 		})
 
 		/*处理点击时导致数据出队*/
+		/** 改进： 
+			用事件代理来实现
+			display.addEventListener("click", function(evt) {
+				if(event.target.nodeName.toLowerCase()=="li");
+        		display.removeChild(event.target);
+			})	
+		*/
 		document.body.addEventListener("click", function(event) {
 			var arr = document.querySelectorAll("#display > *");
 			arr.forEach(function(num) {
