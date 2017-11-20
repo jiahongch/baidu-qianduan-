@@ -1,0 +1,184 @@
+/*取消所有元素的默认margin与padding*/
+* {
+	margin: 0;
+	padding: 0;
+}
+/*防止图片宽度过大*/
+img {
+	max-width: 100%;
+}
+div.wrapper {
+	background-color: #eee;
+	margin: 0 auto;
+	overflow: hidden;
+	min-width: 960px;
+}
+
+.two_wrapper {
+	position: relative;
+}
+
+main {
+	margin-right: 500px;
+}
+
+
+/*header的布局*/
+/*左边图片有字，下面图片不明原因不到header元素的长度*/
+header img {
+	margin-left: -12px;
+	margin-bottom: -4px;
+}
+header {
+	background-color: black;
+}
+nav {
+	float: right;
+	margin-top: 40px
+}
+/*变为inline-block会使原来的小圆点也跟着不见，因为li的display属性是list-item，想保留小圆点可用float技术*/
+nav ul li {
+	display: inline-block;
+}
+nav ul li a {
+	text-decoration: none;
+	color: white;
+	margin-right: 15px;
+}
+nav ul li a:hover {
+	color: gray;
+}
+
+/*main的布局*/
+article, section, aside {
+	margin: 25px;
+	border-right: 2px solid gray;
+	border-bottom: 2px solid gray;
+	background-color: white;
+	padding: 30px 20px;
+}
+section div {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+article h2, article div {
+	color: gray;
+	font-size: 1em;
+	margin: 20px 0;
+}
+article div {
+	font-size: .6em;
+}
+article p {
+	margin: 20px 0;
+	text-indent: 32px;
+}
+article p:last-child {
+	margin-bottom: 0px;
+}
+article ul{
+	margin-top: 20px;
+}
+article ul li {
+	list-style-type: none;
+}
+/*处理图片*/
+figure {
+	border: 2px solid gray;
+	max-width: 230px;
+	margin: 20px 0;
+	margin-right: 10px
+}
+/*figure:last-child {
+	margin-bottom: 0px;
+}*/
+figcaption {
+	text-align: center;
+	padding: 15px;
+	padding-bottom: 0;
+}
+figure img {
+	max-width: 200px;
+	padding: 15px;
+}
+/*处理最后一篇article*/
+article ol {
+	margin-left: 60px;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+th {
+	text-align: left;
+	background-color: black;
+	color: white;
+}
+tfoot {
+	font-weight: bold;
+	background-color: gray;
+}
+
+
+/*处理aside*/
+aside {
+	position: absolute;
+	width: 450px;
+	top: -25px;
+	right: -10px;
+}
+aside h1 {
+	border-left: 2px solid gray;
+	padding-left: 15px;
+	font-size: 1.2em;
+	margin-bottom: 20px;
+}
+div.align1 {
+	margin-left: 100px;
+}
+aside div * {
+	margin: 3px;
+}
+.align1 label {
+	display: inline-block;
+	float: left;
+	text-align: right;
+	width: 10em;
+	clear: both;
+}
+aside p {
+	font-size: .8em;
+	color: #777;
+}
+.align2 {
+	margin-left: 200px;
+	margin-top: 20px;
+}
+label[for="description"] {
+	float: left;
+}
+textarea {
+	width: 60%;
+	height: 10em;
+}
+button {
+	width: 100%;
+	font-size: 1.2em;
+	line-height: 2;
+	background-color: #22f;
+	color: white;
+	border-radius: 10px;
+	border: none;
+}
+
+
+/*处理footer*/
+footer {
+	background-color: black;
+	text-align: center;
+	line-height: 5;
+	color: white;
+	font-size: 0.8em;
+}
